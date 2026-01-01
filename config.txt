@@ -1,0 +1,16 @@
+COMMAND=msedge --kiosk https://stlgotit.com/RickAstley.mp4 --edge-kiosk-type=fullscreen
+
+# Initial delay before the FIRST run (seconds)
+RUN_DELAY=30
+
+# Random delay range (seconds) between later runs
+MIN_DELAY=100
+MAX_DELAY=300
+
+# Run only once after initial delay?
+RUN_ONCE=false
+
+# LED settings
+LED_MODE=Rainbow        # Off, Solid, Rainbow, Rainbow Blink, Breath, Blink
+LED_COLOR=RED           # FastLED-style color name (for Solid/Breath/Blink)
+LED_SPEED=150           # ms – speed of pattern
