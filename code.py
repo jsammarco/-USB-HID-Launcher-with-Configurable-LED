@@ -316,7 +316,7 @@ def sleep_with_animation(duration):
 
 kbd = Keyboard(usb_hid.devices)
 layout = KeyboardLayoutUS(kbd)
-
+layout.key_delay = 0.001      # or 0.001
 
 def win_r():
     """Press Win + R (Run dialog)."""
@@ -329,8 +329,8 @@ def win_r():
 def gogogadget():
     """Open Win+R and type the configured command."""
     win_r()
-    layout.write(config["command"])
-    time.sleep(0.2)
+    layout.write(config["command"], delay=0.001)
+    time.sleep(0.15)
     kbd.press(Keycode.ENTER)
     kbd.release_all()
 
